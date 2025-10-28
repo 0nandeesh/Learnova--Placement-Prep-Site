@@ -38,7 +38,7 @@ const SQL = () => {
 
   const fetchMaterials = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/sql/');
+      const response = await axios.get('https://learnova-placement-prep-site.onrender.com/api/sql/');
       setMaterials(response.data);
       setLoading(false);
     } catch (error) {
@@ -49,7 +49,7 @@ const SQL = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/sql/categories');
+      const response = await axios.get('https://learnova-placement-prep-site.onrender.com/api/sql/categories');
       setCategories(response.data.categories);
     } catch (error) {
       console.error('Error fetching categories:', error);
@@ -58,7 +58,7 @@ const SQL = () => {
 
   const fetchDifficulties = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/sql/difficulties');
+      const response = await axios.get('https://learnova-placement-prep-site.onrender.com//api/sql/difficulties');
       setDifficulties(response.data.difficulties);
     } catch (error) {
       console.error('Error fetching difficulties:', error);
@@ -68,9 +68,9 @@ const SQL = () => {
   const fetchResources = async () => {
     try {
       const [courses, practice, materials] = await Promise.all([
-        axios.get('http://localhost:8000/api/sql/resources/courses'),
-        axios.get('http://localhost:8000/api/sql/resources/practice'),
-        axios.get('http://localhost:8000/api/sql/resources/materials')
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/sql/resources/courses'),
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/sql/resources/practice'),
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/sql/resources/materials')
       ]);
       setResources({
         courses: courses.data.courses || [],
