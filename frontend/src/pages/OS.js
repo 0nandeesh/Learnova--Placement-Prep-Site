@@ -41,7 +41,7 @@ const OS = () => {
 
   const fetchNotes = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/os/');
+      const response = await axios.get('https://learnova-placement-prep-site.onrender.com/api/os/');
       setNotes(response.data);
       setLoading(false);
     } catch (error) {
@@ -52,7 +52,7 @@ const OS = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/os/categories');
+      const response = await axios.get('https://learnova-placement-prep-site.onrender.com/api/os/categories');
       setCategories(response.data.categories);
     } catch (error) {
       console.error('Error fetching categories:', error);
@@ -62,9 +62,9 @@ const OS = () => {
   const fetchResources = async () => {
     try {
       const [courses, topics, materials] = await Promise.all([
-        axios.get('http://localhost:8000/api/os/resources/courses'),
-        axios.get('http://localhost:8000/api/os/resources/topics'),
-        axios.get('http://localhost:8000/api/os/resources/materials')
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/os/resources/courses'),
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/os/resources/topics'),
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/os/resources/materials')
       ]);
       setResources({
         courses: courses.data.courses || [],
