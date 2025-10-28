@@ -48,7 +48,7 @@ const DSA = () => {
 
   const fetchQuestions = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/dsa/');
+      const response = await axios.get('https://learnova-placement-prep-site.onrender.com/api/dsa/');
       setQuestions(response.data);
       setLoading(false);
     } catch (error) {
@@ -59,7 +59,7 @@ const DSA = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/dsa/categories');
+      const response = await axios.get('https://learnova-placement-prep-site.onrender.com/api/dsa/categories');
       setCategories(response.data.categories);
     } catch (error) {
       console.error('Error fetching categories:', error);
@@ -68,7 +68,7 @@ const DSA = () => {
 
   const fetchDifficulties = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/dsa/difficulties');
+      const response = await axios.get('https://learnova-placement-prep-site.onrender.com/api/dsa/difficulties');
       setDifficulties(response.data.difficulties);
     } catch (error) {
       console.error('Error fetching difficulties:', error);
@@ -78,11 +78,11 @@ const DSA = () => {
   const fetchResources = async () => {
     try {
       const [courses, projects, learningPaths, problemSets, materials] = await Promise.all([
-        axios.get('http://localhost:8000/api/dsa/resources/courses'),
-        axios.get('http://localhost:8000/api/dsa/resources/projects'),
-        axios.get('http://localhost:8000/api/dsa/resources/learning-paths'),
-        axios.get('http://localhost:8000/api/dsa/resources/problem-sets'),
-        axios.get('http://localhost:8000/api/dsa/resources/materials')
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/dsa/resources/courses'),
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/dsa/resources/projects'),
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/dsa/resources/learning-paths'),
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/dsa/resources/problem-sets'),
+        axios.get('https://learnova-placement-prep-site.onrender.com//api/dsa/resources/materials')
       ]);
       setResources({
         courses: courses.data.courses || [],
