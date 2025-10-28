@@ -14,7 +14,8 @@ import AIML from './pages/AIML';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+const API_BASE_URL = 'https://learnova-placement-prep-site.onrender.com';
+
 
 const LEARNOVA_INITIAL_MESSAGES = [
   {
