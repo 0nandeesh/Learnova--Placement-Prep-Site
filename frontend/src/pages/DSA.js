@@ -82,7 +82,9 @@ const DSA = () => {
         axios.get('https://learnova-placement-prep-site.onrender.com/api/dsa/resources/projects'),
         axios.get('https://learnova-placement-prep-site.onrender.com/api/dsa/resources/learning-paths'),
         axios.get('https://learnova-placement-prep-site.onrender.com/api/dsa/resources/problem-sets'),
-        axios.get('https://learnova-placement-prep-site.onrender.com/api/dsa/resources/materials')
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/dsa/resources/materials'),
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/dsa/resources/all'),
+        
       ]);
       setResources({
         courses: courses.data.courses || [],
