@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PrepNexus – Your Smart Placement Companion
 
 A comprehensive full-stack web application for placement preparation with DSA, SQL, and OS materials. **No database required!**
@@ -151,3 +152,7 @@ uvicorn app.main:app --reload
 ## 📄 License
 
 MIT License - see LICENSE file for details
+=======
+# Learnova--Placement-Prep-Site
+A comprehensive full-stack web application for placement preparation with DSA, SQL, and OS materials.
+>>>>>>> 76c8831eef06ca25b89958f31460d7e7c9944899
