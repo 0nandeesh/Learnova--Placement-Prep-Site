@@ -79,10 +79,10 @@ const AIML = () => {
   const fetchResources = async () => {
     try {
       const [courses, projects, learningPaths, materials] = await Promise.all([
-        axios.get('http://localhost:8000/api/aiml/resources/courses'),
-        axios.get('http://localhost:8000/api/aiml/resources/projects'),
-        axios.get('http://localhost:8000/api/aiml/resources/learning-paths'),
-        axios.get('http://localhost:8000/api/aiml/resources/materials')
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/aiml/resources/courses'),
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/aiml/resources/projects'),
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/aiml/resources/learning-paths'),
+        axios.get('https://learnova-placement-prep-site.onrender.com/api/aiml/resources/materials')
       ]);
       setResources({
         courses: courses.data.courses || [],
