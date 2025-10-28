@@ -48,7 +48,8 @@ const AIML = () => {
 
   const fetchConcepts = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/aiml/');
+       const response = await axios.get('https://learnova-placement-prep-site.onrender.com/api/aiml/');
+
       setConcepts(response.data);
       setLoading(false);
     } catch (error) {
@@ -59,7 +60,7 @@ const AIML = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/aiml/categories');
+      const response = await axios.get('https://learnova-placement-prep-site.onrender.com/api/aiml/categories');
       setCategories(response.data.categories);
     } catch (error) {
       console.error('Error fetching categories:', error);
@@ -68,7 +69,7 @@ const AIML = () => {
 
   const fetchDifficulties = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/aiml/difficulties');
+      const response = await axios.get('https://learnova-placement-prep-site.onrender.com/api/aiml/difficulties');
       setDifficulties(response.data.difficulties);
     } catch (error) {
       console.error('Error fetching difficulties:', error);
